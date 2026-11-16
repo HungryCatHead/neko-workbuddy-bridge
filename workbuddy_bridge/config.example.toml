@@ -1,0 +1,12 @@
+[plugin_runtime]
+enabled = true
+# 开发模式加载的插件无法自动启动（N.E.K.O. 硬规则），
+# 只有正式打包安装后本字段才生效。
+auto_start = true
+
+[bridge]
+# 队列根目录。留空 = 自动使用「本插件所在目录下的 queue/」——推荐。
+# 想放到别处（比如大容量磁盘）再填绝对路径，或设环境变量 WORKBUDDY_BRIDGE_ROOT。
+root = ""
+# 通道类型：file = 本地文件队列（默认，零配置）；email = 智能体邮箱（需先开通）
+channel = "file"

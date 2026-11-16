@@ -1,0 +1,31 @@
+[plugin]
+id = "workbuddy_bridge"
+name = "WorkBuddy Bridge"
+version = "0.1.0"
+type = "plugin"
+description = "把 WorkBuddy 当作猫娘的手：通过本地队列把任务委派给 WorkBuddy，并把成果送回来。当用户需要真正动手的活（查资料、做文档表格PPT、写代码、分析数据、处理文件）时调用。"
+short_description = "让猫娘把任务委派给 WorkBuddy 并收回成果。"
+keywords = ["workbuddy", "委派", "交给", "帮我做", "delegate", "干活", "文档", "PPT"]
+entry = "plugin.plugins.workbuddy_bridge:WorkbuddyBridgePlugin"
+
+[plugin.author]
+# 非官方插件：第三方基于 N.E.K.O. 公开的插件 SDK 开发，
+# 与 Project N.E.K.O. 项目方无隶属、赞助或背书关系。
+name = "HungryCatHead"
+
+[plugin.sdk]
+recommended = ">=0.1.0,<0.2.0"
+supported = ">=0.1.0,<0.3.0"
+
+[plugin_runtime]
+enabled = true
+# 注：开发模式插件由 N.E.K.O. 强制手动启动，auto_start 对源码插件无效。
+# 需正式打包安装后，auto_start 才会生效。
+auto_start = true
+
+[bridge]
+# 队列根目录。留空 = 自动使用「本插件所在目录下的 queue/」——推荐，
+# 跟着插件走，不依赖任何对话工作区路径（清理历史对话不会误伤）。
+# 也可用环境变量 WORKBUDDY_BRIDGE_ROOT 覆盖（优先级最高）。
+root = ""
+channel = "file"
