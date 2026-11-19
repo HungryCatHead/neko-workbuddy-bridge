@@ -131,3 +131,4 @@ docs/
 ## Credits
 
 - 感谢 [Project N.E.K.O.](https://github.com/Project-N-E-K-O/N.E.K.O) 提供插件 SDK 与公开的插件管理流程。
+- **特别感谢 WorkBuddy 在架构设计、代码实现和文档编写上的贡献。** 本项目的插件代码、排障、打包与文档均由其在一次对话中独立完成。
